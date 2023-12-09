@@ -95,6 +95,7 @@ form > button:hover {
   width: 17px;
   height: auto;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 #peso {
@@ -135,6 +136,27 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+dialog {
+  border-radius: 10px;
+}
+
+dialog > button {
+  width: 100%;
+  border: none;
+  background: var(--primary-color-lite);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+dialog > button:hover {
+  background: var(--primary-color);
 }
 
 @media only screen and (max-width: 768px) {

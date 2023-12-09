@@ -2,6 +2,19 @@ let peso = document.getElementById('peso');
 let altura = document.getElementById('altura');
 let calcular = document.getElementById('calcular');
 let verificacao = /[.\W]/
+let modal = document.querySelector('dialog');
+const abrirModal = document.querySelectorAll('.ajuda');
+const fecharModal = document.querySelector('#fechar')
+
+for (let i = 0; i < abrirModal.length; i++) {
+  abrirModal[i].addEventListener('click', () => {
+    modal.showModal();
+  })
+}
+
+fecharModal.addEventListener('click', () => {
+  modal.close();
+})
 
 calcular.addEventListener('click', function(event) {
   event.preventDefault();
