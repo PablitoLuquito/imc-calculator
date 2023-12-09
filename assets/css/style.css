@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
 :root {
-  --primary-color: rgb(13, 106, 134);
-  --primary-color-darker: rgb(10, 80, 101);
+  --primary-color: rgb(20, 20, 20);
+  --primary-color-lite: rgb(40, 40, 40);
+  --light-grey: rgb(230, 230, 230);
+  --purple-gradient: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  --green-gradient: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  --orange-to-purple: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
 }
 
 * {
@@ -11,60 +15,116 @@
 }
 
 body {
+  min-height: 100vh;
   padding: 0;
   margin: 0;
-  background: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Open sans', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.3em;
   line-height: 1.5em;
+  background-image: var(--orange-to-purple);
 }
 
-.container {
-  max-width: 640px;
+main {
   background: #fff;
-  padding: 20px;
-  margin: 50px 0;
   border-radius: 10px;
-}
-
-.inner-container {
+  height: 75vh;
   display: flex;
+  overflow: hidden;
+  border: 2px solid black;
 }
 
-.inner-container > div {
-  margin-right: 75px;
+.img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-form input, form label, form button {
+.img > img {
+  width: 50%;
+  height: auto;
+}
+
+.calc-imc {
+  width: 50%;
+  background: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc-imc > h1 {
+  text-align: left;
+}
+
+form > input, form > button {
   display: block;
   width: 100%;
   margin-bottom: 10px;
 }
 
-form input {
+form > input {
   font-size: 24px;
   height: 50px;
   padding: 0 20px;
 }
 
-form input:focus {
+form > input:focus {
   outline: 1px solid var(--primary-color);
 }
 
-form button {
+form > button {
   border: none;
-  background: var(--primary-color);
+  background: var(--primary-color-lite);
   color: #fff;
   font-size: 18px;
   font-weight: 700;
   height: 50px;
   cursor: pointer;
   margin-top: 30px;
+  border-radius: 5px;
 }
 
-form button:hover {
-  background: var(--primary-color-darker);
+form > button:hover {
+  background: var(--primary-color);
+}
+
+.ajuda > img {
+  width: 17px;
+  height: auto;
+  margin-left: 10px;
+}
+
+#peso {
+  position: relative;
+  background-image: url(../img/weight-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  background-size: 25px;
+  padding-left: 40px;
+}
+
+#altura {
+  position: relative;
+  background-image: url(../img/ruler-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  background-size: 25px;
+  padding-left: 40px;
+}
+
+#msg {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  display: none;
+}
+
+#msg.show {
+  display: block;
 }

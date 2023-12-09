@@ -10,44 +10,26 @@
 </head>
 
 <body>
-  <section class="container">
-    <h1>Tabela IMC</h1>
-    <div class="inner-container">
-      <div class="imc">
-        <h3>IMC</h3>
-        <p>
-          Menos do que 18,5<br>
-          Entre 18,5 e 24,9<br>
-          Entre 25 e 29,9<br>
-          Entre 30 e 34,9<br>
-          Entre 35 e 39,9<br>
-          Mais do que 40
-        </p>
-      </div>
-      <div class="resultado">
-        <h3>Resultado</h3>
-        <p>
-          Abaixo do peso<br>
-          Peso normal<br>
-          Sobrepeso<br>
-          Obesidade grau 1<br>
-          Obesidade grau 2<br>
-          Obesidade grau 3
-        </p>
-      </div>
-    </div>
-    <h2>Calcule seu IMC</h2>
-    <form id="form-imc">
-      <label for="peso">Peso: (Em Kg)</label>
-      <input type="number" id="peso" autofocus>
+  <main>
+    <article class="img">
+      <img src="./assets/img/imc-icon.png" alt="Icone de uma balança com a palavra IMC">
+    </article>
+    <section class="calc-imc">
+      <form>
+        <h1>Calculadora de IMC</h1>
+        <label for="peso">Peso em KG</label><i class="ajuda" title="Insira apenas números."><img
+            src="./assets/img/help-icon.svg" alt="Ajuda"></i>
+        <input type="text" id="peso" title="Insira apenas números." autofocus>
 
-      <label for="altura">Altura: (Em cm)</label>
-      <input type="number" id="altura">
+        <label for="altura">Altura em cm</label><i class="ajuda" title="Insira apenas números."><img
+            src="./assets/img/help-icon.svg" alt="Ajuda"></i>
+        <input type="text" id="altura" title="Insira apenas números.">
 
-      <button type="submit" id="calcular">Calcular</button>
-    </form>
-    <p id="msg"></p>
-  </section>
+        <button type="submit" id="calcular">Calcular</button>
+      </form>
+      <p id="msg"></p>
+    </section>
+  </main>
 
   <script src='./assets/js/script.js'></script>
 </body>
