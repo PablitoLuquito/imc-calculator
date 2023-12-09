@@ -19,11 +19,11 @@
         <h1>Calculadora de IMC</h1>
         <label for="peso">Peso em KG</label><i class="ajuda" title="Insira apenas números."><img
             src="./assets/img/help-icon.svg" alt="Ajuda"></i>
-        <input type="text" id="peso" pattern="[0-9]*" title="Insira apenas números." autofocus>
+        <input type="number" id="peso" pattern="[0-9]*" title="Insira apenas números." required autofocus>
 
         <label for="altura">Altura em cm</label><i class="ajuda" title="Insira apenas números."><img
             src="./assets/img/help-icon.svg" alt="Ajuda"></i>
-        <input type="text" id="altura" pattern="[0-9]*" title="Insira apenas números.">
+        <input type="number" id="altura" pattern="[0-9]*" title="Insira apenas números." required>
 
         <button type="submit" id="calcular">Calcular</button>
       </form>
